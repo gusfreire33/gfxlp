@@ -288,6 +288,10 @@ header.scrolled{
   .recife-main-img{min-height:280px !important}
   .localizacao-grid{flex-direction:column !important}
   .localizacao-map{min-height:300px !important}
+  .form-grid{grid-template-columns:1fr !important}
+  .form-fields{grid-template-columns:1fr !important}
+  .form-card{padding:24px !important}
+  .form-grid{gap:40px !important}
 }
 
 /* Reduced motion */
@@ -801,7 +805,7 @@ header.scrolled{
 <!-- FORMULÁRIO DE CONTATO -->
 <section id="form-contato" class="sec sec-alt">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:80px;align-items:start;">
+    <div class="form-grid" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:80px;align-items:start;">
       <div class="reveal reveal-left reveal-stagger" data-delay="1" style="padding-top:8px;">
         <p class="eyebrow">11 — Entre em contato</p>
         <h2 class="h2">Preencha o formulário que a gente te liga.</h2>
@@ -818,7 +822,7 @@ header.scrolled{
         </div>
       </div>
       <div class="reveal reveal-right" data-delay="2">
-        <form class="card tech-glow" style="padding:40px;gap:20px;" action="https://pages.wonnedigital.com.br/api/lead" method="POST" id="form-lead">
+        <form class="card tech-glow form-card" style="padding:40px;gap:20px;" action="https://pages.wonnedigital.com.br/api/lead" method="POST" id="form-lead">
           <input type="hidden" name="origin" value="gfxlp">
           <input type="hidden" name="utm_source" value="">
           <input type="hidden" name="utm_medium" value="">
@@ -826,7 +830,7 @@ header.scrolled{
           <input type="hidden" name="utm_content" value="">
           <input type="hidden" name="utm_term" value="">
           
-<div class="recife-cards" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;">
+<div class="form-fields" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;">
             <div style="display:flex;flex-direction:column;gap:8px;">
               <label for="nome" style="font:500 13px/1 'Inter',system-ui,sans-serif;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;">Nome completo</label>
               <input type="text" id="nome" name="name" required placeholder="Seu nome" style="height:48px;padding:0 16px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text);font:400 16px/1 'Inter',system-ui,sans-serif;transition:border-color .2s,box-shadow .2s;" onfocus="this.style.borderColor='var(--gold)';this.style.boxShadow='0 0 0 3px rgba(183,126,69,0.2)'" onblur="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
